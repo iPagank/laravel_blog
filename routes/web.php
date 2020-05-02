@@ -24,4 +24,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admin-panel')->group(function(){
     Route::resource('/user', 'UserController');
+    Route::resource('/categories', 'CategoryController');
 });
