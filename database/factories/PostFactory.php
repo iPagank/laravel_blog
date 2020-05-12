@@ -18,7 +18,6 @@ $factory->define(Post::class, function (Faker $faker) {
         'slug' => Str::slug($title),
         'excerpt' => $faker->sentence(10),
         'content_raw' => $text,
-        'content_html' => $text,
         'is_published' => $isPublished,
         'published_at' => $created,
         'img_url' => $faker->imageUrl()

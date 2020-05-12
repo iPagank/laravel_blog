@@ -23,6 +23,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admin-panel')->group(function(){
+    Route::get('/', function () {
+        return view('admin.index');
+    });
     Route::resource('/user', 'UserController');
     Route::resource('/categories', 'CategoryController');
+    Route::resource('/post', 'PostController');
 });

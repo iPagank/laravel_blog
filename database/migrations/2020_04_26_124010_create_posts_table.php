@@ -26,12 +26,11 @@ class CreatePostsTable extends Migration
             $table->text('excerpt')->nullable();
 
             $table->text('content_raw');
-            $table->text('content_html');
 
             $table->boolean('is_published')->default(0);
             $table->timestamp('published_at')->nullable();
 
-            $table->string('img_url');
+            $table->string('img_url')->nullable();
 
             $table->timestamps();
             $table->softDeletes();
