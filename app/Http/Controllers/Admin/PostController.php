@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AdminPostRequest;
 use App\Models\Categories;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -43,7 +44,7 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AdminPostRequest $request)
     {
         $user = auth()->user();
         $result = array_merge($request->input(),['user_id' => $user->id]);
@@ -91,7 +92,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(AdminPostRequest $request, $id)
     {
         $post = $this->model->find($id);
         if($post){

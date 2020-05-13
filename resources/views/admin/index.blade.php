@@ -14,13 +14,13 @@
             <a href="{{route('admin.post.index')}}">
                 <div class="col">
                     <img src="{{URL::asset('/img/post_admin.png')}}" height="200" width="200">
-                    <h5><a href="{{route('admin.post.index')}}">User Panel</a></h5>
+                    <h5><a href="{{route('admin.post.index')}}">Post Panel</a></h5>
                 </div>
             </a>
             <a href="{{route('admin.categories.index')}}">
                 <div class="col">
                     <img src="{{URL::asset('/img/category_admin.png')}}" height="200" width="200">
-                    <h5><a href="{{route('admin.categories.index')}}">User Panel</a></h5>
+                    <h5><a href="{{route('admin.categories.index')}}">Category Panel</a></h5>
                 </div>
             </a>
             </div>
